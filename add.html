@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>إضافة عقار</title>
+  </head>
+
+  <body>
+    <nav>
+      <h1>عقارات المستقبل</h1>
+      <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="add.html" class="active">إضافة عقار</a></li>
+        <li><a href="buy.html">شراء</a></li>
+        <li><a href="rent.html">إيجار</a></li>
+      </ul>
+    </nav>
+
+    <main class="properties add-page">
+    <section class="add-property-panel">
+      <h2>إضافة عقار جديد</h2>
+
+      <label>نوع العقار:</label>
+      <input id="type" list="types" placeholder="اختر نوع العقار" />
+      <datalist id="types">
+        <option>شقة</option>
+        <option>فيلا</option>
+        <option>أرض</option>
+        <option>محل تجاري</option>
+        <option>منزل</option>
+      </datalist>
+      <label>نوع العملية:</label>
+      <select id="operation">
+        <option value="buy">شراء</option>
+        <option value="rent">إيجار</option>
+      </select>
+
+      <label>اسم صاحب العقار:</label>
+      <input id="owner" type="text" />
+
+      <label>الموقع:</label>
+      <input id="location" type="text" />
+
+      <label>السعر:</label>
+      <input id="price" type="number" />
+
+      <label>الوصف:</label>
+      <textarea id="desc" rows="5"></textarea>
+
+     <label>صورة العقار:</label>
+<input id="image" type="file" accept="image/*">
+
+
+      <button type="button" onclick="addProperty()">إضافة العقار</button>
+    </section>
+</main>
+    <script src="script.js"></script>
+  </body>
+</html>

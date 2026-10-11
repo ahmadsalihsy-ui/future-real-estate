@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إيجار عقار | عقارات المستقبل</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <h1>عقارات المستقبل</h1>
+    <ul>
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="add.html">إضافة عقار</a></li>
+        <li><a href="buy.html">شراء</a></li>
+        <li><a href="rent.html" class="active">إيجار</a></li>
+    </ul>
+</nav>
+
+<main class="properties">
+    <h2>العقارات المتاحة للإيجار</h2>
+
+    <section class="filters" aria-label="البحث والتصفية">
+        <div class="filter-field">
+            <label for="searchLocation">ابحث عن الموقع</label>
+            <input
+                type="search"
+                id="searchLocation"
+                placeholder="مثال: عمّان"
+            >
+        </div>
+
+        <div class="filter-field">
+            <label for="filterType">نوع العقار</label>
+            <select id="filterType">
+                <option value="">جميع الأنواع</option>
+                <option value="شقة">شقة</option>
+                <option value="فيلا">فيلا</option>
+                <option value="أرض">أرض</option>
+                <option value="محل تجاري">محل تجاري</option>
+                <option value="منزل">منزل</option>
+            </select>
+        </div>
+
+        <div class="filter-field">
+            <label for="minPrice">أقل سعر</label>
+            <input type="number" id="minPrice" min="0" placeholder="0">
+        </div>
+
+        <div class="filter-field">
+            <label for="maxPrice">أعلى سعر</label>
+            <input type="number" id="maxPrice" min="0" placeholder="بلا حد">
+        </div>
+
+        <div class="filter-field">
+            <label for="sortPrice">ترتيب السعر</label>
+            <select id="sortPrice">
+                <option value="default">الترتيب الافتراضي</option>
+                <option value="asc">الأقل سعرًا</option>
+                <option value="desc">الأعلى سعرًا</option>
+            </select>
+        </div>
+
+        <button type="button" id="resetFilters" class="reset-filters">
+            مسح الفلاتر
+        </button>
+    </section>
+
+    <p id="resultsCount" class="results-count" aria-live="polite"></p>
+
+    <div id="rentList" class="cards"></div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
